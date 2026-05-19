@@ -30,7 +30,7 @@ const Header = () => {
   }, [menuOpen]);
 
   return (
-    <div className="flex justify-center w-full fixed">
+    <div className="flex justify-center w-full fixed top-0 z-20">
       <motion.header
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -41,10 +41,10 @@ const Header = () => {
           <Image src="/images/chiglogo.png" alt="Logo" width={120} height={120} />
         </div>
         <nav className="gap-7 hidden md:flex">
-          <button className="hover:text-my-blue cursor-pointer">Home</button>
-          <button className="hover:text-my-blue cursor-pointer">Projects</button>
-          <button className="hover:text-my-blue cursor-pointer">Process</button>
-          <button className="hover:text-my-blue cursor-pointer">Contact</button>
+          <button className="hover:text-my-blue cursor-pointer transition-colors duration-300">Home</button>
+          <button className="hover:text-my-blue cursor-pointer transition-colors duration-300">Projects</button>
+          <button className="hover:text-my-blue cursor-pointer transition-colors duration-300">Process</button>
+          <button className="hover:text-my-blue cursor-pointer transition-colors duration-300">Contact</button>
         </nav>
         <div ref={menuRef}>
           <div className="hidden md:block">
@@ -72,7 +72,7 @@ const Header = () => {
           <AnimatePresence>
             {menuOpen && (
               <motion.div
-                initial={{ scale: 0, originX: 0, originY: 0 }}
+                initial={{ scale: 0, originX: 1, originY: 0 }}
                 animate={{ scale: 1 }}
                 exit={{ scale: 0 }}
                 transition={{ type: "spring", stiffness: 150, damping: 20 }}

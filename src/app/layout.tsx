@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Noto_Sans_Lao } from 'next/font/google';
 import "./globals.css";
+import Header from "@/components/Header";
 
 const grotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
       className={`${lao.variable} ${grotesk.variable} h-full font-grotesk antialiased`}
     >
       <body className="min-h-full flex flex-col bg-my-deepest-black text-my-white">
+        <Header />
         <main>{children}</main>
       </body>
     </html>

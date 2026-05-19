@@ -13,7 +13,9 @@
   --color-my-black: #1C1E1E;
   --color-my-light-black: #484C4D;
   --color-my-white: #E8E8E8;
-  --color-my-blue: #0D96BF;
+  /*--color-my-blue: #0D96BF;*/
+  /* --color-my-blue: #155D70; */
+  --color-my-blue: #1c719e; 
   --font-grotesk: var(--font-grotesk);
   --font-lao: var(--font-lao);
 }
